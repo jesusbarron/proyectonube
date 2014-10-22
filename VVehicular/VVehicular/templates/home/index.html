@@ -1,0 +1,126 @@
+{% extends 'base2.html' %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/media/css/theme.css" />
+    <link rel="stylesheet" href="/media/css/index.css" type="text/css" media="screen" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="/media/css/lib/animate.css" media="screen, projection" />    
+
+    <section id="feature_slider" class="">
+        <!-- 
+            Each slide is composed by <img> and .info
+            - .info's position is customized with css in index.css
+            - each <img> parallax effect is declared by the following params inside its class:
+            
+            example: class="asset left-472 sp600 t120 z3"
+            left-472 means left: -472px from the center
+            sp600 is speed transition
+            t120 is top to 120px
+            z3 is z-index to 3
+            Note: Maintain this order of params
+
+            For the backgrounds, you can combine from the bgs folder :D
+        -->
+        <article class="slide" id="showcasing" style="background: url('/media/images/8c572004c4ee7a3b6a8f0bdddeb237d7.jpg') repeat-x top center;">
+            <div class="info">
+                <h2>Bienvenidos.</h2>
+            </div>
+        </article>
+
+
+        <article class="slide" id="ideas" style="background: url('/media/images/verificacion-vehicular-ensenada.jpg') repeat-x top center;">
+            <div class="info">
+                <h2></h2>
+            </div>
+            
+            <img class="asset left-210 sp600 t213 z2" src="/media/images/fe45ed3f-9c19-45d9-a971-698cb852d89c.jpg" />
+            <img class="asset left60 sp600 t260 z1" src="/media/images/679832-N.JPG" />
+        </article>
+        
+        <article class="slide" id="tour" style="background: url('/media/images/679832-N.JPG') repeat-x top center;">
+            <div class="info">
+                <h4>Ven a nuestros centros de verificacion mas cercanos</h4>
+                <a href={% url 'vista_ubicaciones' %}>Ubicaciones</a>
+            </div>
+        </article>
+
+        <article class="slide" id="responsive" style="background: url('/media/images/793261-N.JPG') repeat-x top center;">
+            <div class="info">
+                <h2>
+                    Contamos con Instalaciones de calidad
+                </h2>  
+            </div>              
+        </article>        
+    </section>
+
+<br>
+<br>
+
+<h1>Bienvenidos</h1>
+
+<p>Esta es una pagina con el finde ayudar a los usuarios a registrar sus vehiculos para una verificacion vehicular. Ya que es muy complicado el estar pasando horas y horas en los centros de verifiacion esperando turno, lo que puede ser muy cansado para el usuario de la comunidad.</p>
+
+
+<div class="span5">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header"><img src="/media/images/images.jpg"/></li>
+                        
+                    </ul>
+                </div><!--well-->
+                
+            </div><!--span3-->
+<div class="span5">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header"><img src="/media/images/verificacion.jpg"/></li>
+                        
+                    </ul>
+                </div><!--well-->
+                
+            </div><!--span3-->
+
+<div class="span5">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header"><img src="/media/images/verificacion1.jpg"/></li>
+                        
+                    </ul>
+                </div><!--well-->
+                
+            </div><!--span3-->
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- starts footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row credits">
+                <div class="span12">
+                    <div class="row social">
+                        <div class="span12">
+                            <a href="https://www.facebook.com/vvehicular2014" target="_blank" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="span12">
+                            © 2014 Verificacion Vehicular. Equipo Negro. All rights reserved. Instituto Tecnologico de Tijuana.
+                            <p>&copy;Version Django: {{django_version}}</p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </footer>
+
+
+{% endblock %}

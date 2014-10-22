@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>    
+<body>
+  <h1>Vehiculos Con motor V6</h1>
+    {% if veh %}
+  <table class="table table-bordered">
+    <theader>
+      <tr>
+        <th>Matricula</th>
+        <th>Procedencia</th>
+        <th>NoSerie</th>
+        <th>Marca</th>
+        <th>Color</th>
+        <th>Clase</th>
+        <th>Capacidad</th>
+        <th>AÑO</th>
+        <th>Puertas</th>
+        <th>Motor</th>
+      </tr>
+    </theader>
+  {% for e in veh %}
+    <tbody>
+      <tr>
+        <td>{{e.Matricula}}</td>
+        <td>{{e.Procedencia}}</td>
+        <td>{{e.NoSerie}}</td>
+        <td>{{e.Marca}}</td>
+        <td>{{e.Color}}</td>
+        <td>{{e.Clase}}</td>
+        <td>{{e.Capacidad}}</td>
+        <td>{{e.Year}}</td>
+        <td>{{e.Puertas}}</td>
+        <td>{{e.Motor}}</td>
+      </tr>
+    </tbody>
+  {% endfor %}
+  </table>
+{% else %}
+  <h2>NO EXISTEN</h2>
+{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Buscar Vehiculo{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<form action="." method="GET">
+    <label for="q">Por favor ingrese la Matricula del Vehiculo:</label>
+    <input type="text" name="q" value="{{ query|escape }}">
+    <input type="submit" value="Buscar" >
+</form>
+
+{% if query %}
+    <h2>Resultados para "{{ query|escape }}":</h2>
+
+    {% if results %}
+  <table class="table table-bordered">
+		<theader>
+			<tr>
+				<th>Matricula</th>
+				<th>Procedencia</th>
+				<th>NoSerie</th>
+				<th>Marca</th>
+				<th>Color</th>
+				<th>Clase</th>
+				<th>Capacidad</th>
+				<th>AÑO</th>
+				<th>Puertas</th>
+				<th>Motor</th>
+			</tr>
+		</theader>
+  {% for e in results %}
+    <tbody>
+      <tr>
+        <td>{{e.Matricula}}</td>
+        <td>{{e.Procedencia}}</td>
+        <td>{{e.NoSerie}}</td>
+        <td>{{e.Marca}}</td>
+        <td>{{e.Color}}</td>
+        <td>{{e.Clase}}</td>
+        <td>{{e.Capacidad}}</td>
+        <td>{{e.Year}}</td>
+        <td>{{e.Puertas}}</td>
+        <td>{{e.Motor}}</td>
+      </tr>
+    </tbody>
+  {% endfor %}
+  </table>
+    {% else %}
+      <p>No hay Vehiculos registrados con esa Matricula</p>
+    {% endif %}
+  {% endif %}
+
+
+ {% endblock %}

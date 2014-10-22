@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Buscar Conductor{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<form action="." method="GET">
+    <label for="q">Por favor ingrese su NO.Licencia:</label>
+    <input type="text" name="q" value="{{ query|escape }}">
+    <input type="submit" value="Buscar" >
+</form>
+
+{% if query %}
+    <h2>Resultados para "{{ query|escape }}":</h2>
+
+    {% if results %}
+      <table class="table table-hover">
+        <theader>
+          <tr>
+            <th>No Licencia</th>
+            <th>MatriculaV</th>
+            <th>Nombre</th>
+            <th>ApellidoPaterno</th>
+            <th>ApellidoMaterno</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+          </tr>
+        </theader>
+  {% for e in results %}
+    <tbody>
+      <tr>
+        <td>{{e.NoLicencia}}</td>
+        <td>{{e.MatriculaV}}</td>
+        <td>{{e.Nombre}}</td>
+        <td>{{e.ApellidoPaterno}}</td>
+        <td>{{e.ApellidoMaterno}}</td>
+        <td>{{e.Direccion}}</td>
+        <td>{{e.Telefono}}</td>
+      </tr>
+    </tbody>
+  {% endfor %}
+  </table>
+    {% else %}
+      <p>No hay Conductores registrados con ese No. de Licencia</p>
+    {% endif %}
+  {% endif %}
+
+
+
+
+ {% endblock %}
+ 

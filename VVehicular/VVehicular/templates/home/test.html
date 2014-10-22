@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Test de Verificacion{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<h2>Selecciona un modelo de motor y el año del vehiculo</h2>
+<html>
+  <head>
+    <script>
+      function Redireccionar() 
+      {
+        if (document.form.idioma.value != "otro")
+        {
+          document.location.href = document.form.idioma.value; 
+        }
+      }
+    </script>
+  </head>
+ 
+  <body>
+    <form name="form">
+      <select name="idioma">
+        <option value="/30por" >V4 & Anterior a 1999</option>
+        <option value="/35por">V4 & 1999</option>
+        <option value="/40por">V4 & 2000</option>
+        <option value="/45por">V4 & 2001</option>
+        <option value="/50por">V4 & 2002</option>
+        <option value="/60por">V4 & 2003</option>
+        <option value="/60por">V4 & 2004</option>
+        <option value="/60por">V4 & 2005</option>
+        <option value="/70por">V4 & 2007</option>
+        <option value="/75por">V4 & 2008</option>
+        <option value="/80por">V4 & 2009</option>
+        <option value="/80por">V4 & 2010</option>
+        <option value="/85por">V4 & 2011</option>
+        <option value="/90por">V4 & 2012</option>
+        <option value="/95por">V4 & 2013</option>
+        <option value="/100por">V4 & 2014</option>
+        <option value="/30por" >V6 & Anterior a 1999</option>
+        <option value="/35por">V6 & 1999</option>
+        <option value="/40por">V6 & 2000</option>
+        <option value="/45por">V6 & 2001</option>
+        <option value="/50por">V6 & 2002</option>
+        <option value="/60por">V6 & 2003</option>
+        <option value="/60por">V6 & 2004</option>
+        <option value="/60por">V6 & 2005</option>
+        <option value="/70por">V6 & 2007</option>
+        <option value="/75por">V6 & 2008</option>
+        <option value="/80por">V6 & 2009</option>
+        <option value="/80por">V6 & 2010</option>
+        <option value="/85por">V6 & 2011</option>
+        <option value="/90por">V6 & 2012</option>
+        <option value="/95por">V6 & 2013</option>
+        <option value="/100por">V6 & 2014</option>
+        <option value="/30por" >V8 & Anterior a 1999</option>
+        <option value="/35por">V8 & 1999</option>
+        <option value="/40por">V8 & 2000</option>
+        <option value="/45por">V8 & 2001</option>
+        <option value="/50por">V8 & 2002</option>
+        <option value="/60por">V8 & 2003</option>
+        <option value="/60por">V8 & 2004</option>
+        <option value="/60por">V8 & 2005</option>
+        <option value="/70por">V8 & 2007</option>
+        <option value="/75por">V8 & 2008</option>
+        <option value="/80por">V8 & 2009</option>
+        <option value="/80por">V8 & 2010</option>
+        <option value="/85por">V8 & 2011</option>
+        <option value="/90por">V8 & 2012</option>
+        <option value="/95por">V8 & 2013</option>
+        <option value="/100por">V8 & 2014</option>
+        <option value="otro" selected="selected">Otro</option>
+      </select>
+ 
+      <input name="Bot&oacute;n" type="button" onClick="Redireccionar();" value="Bot&oacute;n">
+    </form>
+  </body>
+</html>
+
+
+  
+ {% endblock %}
+ 

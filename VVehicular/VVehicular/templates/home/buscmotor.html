@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Busqueda de Motor{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<h2>Selecciona un modelo de motor</h2>
+
+    <script>
+      function Redireccionar() 
+      {
+        if (document.form.motor.value != "")
+        {
+          document.location.href = document.form.motor.value; 
+        }
+      }
+    </script>
+ 
+
+  
+    <form name="form" action="." method="GET" >
+      <select name="motor">
+        <option value="/motv4" >V4</option>
+        <option value="/motv6">V6</option>
+        <option value="/motv8">V8</option>
+        <option value="" selected="selected">------</option>
+      </select>
+ 
+      <input name="Bot&oacute;n" type="button" onClick="Redireccionar();" value="Bot&oacute;n">
+    </form>
+
+ {% endblock %}
+ 
